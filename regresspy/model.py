@@ -4,8 +4,7 @@ from regresspy.regression import Regression
 from regresspy.loss import rmse
 
 iris = load_iris()
-# I will use sepal length to predict sepal width
-
+# We will use sepal length to predict sepal width
 X = iris.data[:, 0].reshape(-1, 1)
 Y = iris.data[:, 1].reshape(-1, 1)
 
@@ -23,7 +22,7 @@ print('Stochastic Gradient Descent Regressor RMSE value:', str(sto_chas_grad_rms
 # #TODO Perform a linear regression using your code and calculate training rmse.
 
 
-regression_value = Regression(epochs= 100, learning_rate= 0.0001)
+regression_value = Regression(epochs= 20, learning_rate= 0.0001)
 regression_value.fit(X, Y)
 reg_pred = regression_value.predict(X)
 #print(reg_pred.shape)

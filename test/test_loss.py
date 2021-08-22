@@ -29,4 +29,3 @@ def test_rmse():
     dummy_labels = np.array([1.0, 3.0, 6.0, 7.0])
     dummy_rmse = 1.0
     assert rmse(dummy_predictions, dummy_labels) == dummy_rmse
-

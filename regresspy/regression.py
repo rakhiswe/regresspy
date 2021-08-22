@@ -16,7 +16,7 @@ class Regression(object):
         self._X = None
         self._Y = None
 
-    def fit(self, X: ndarray, Y:ndarray) -> None:
+    def fit(self, X: ndarray, Y: ndarray) -> None:
         assert X.shape[0] == Y.shape[0]
 
         self._initialize_weights(X.shape)
@@ -60,9 +60,9 @@ class Regression(object):
     def _train(self, X: ndarray, Y: ndarray) -> None:
 
         for i in range(self._epochs):
-            print('Epoch: ', i+1)
-            loss, info = forward(X, Y, self._weights) #TODO Compute forward propagation
+            print('Epoch: ', i + 1)
+            loss, info = forward(X, Y, self._weights)  # TODO Compute forward propagation
             print('Loss: ', loss)
-            grads = backward(info, self._weights) #TODO Compute backward propagation
-            self._weights['W'] = self._weights['W'] - grads['W']*self._lr
-            self._weights['B'] = self._weights['B'] - grads['B']*self._lr
+            grads = backward(info, self._weights)  # TODO Compute backward propagation
+            self._weights['W'] = self._weights['W'] - grads['W'] * self._lr  # TODO
+            self._weights['B'] = self._weights['B'] - grads['B'] * self._lr  # TODO
